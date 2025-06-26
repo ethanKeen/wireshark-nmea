@@ -97,8 +97,8 @@ function toNext(buffer, offset, s)
 end
 
 do
-  NMEAPROTO = Proto("NMEA0183", "NMEA 0183 Packet")
-  NMEASENTENCE = Proto('NMEA', 'NMEA Sentence')
+  NMEAPROTO = Proto("NMEA-0183", "NMEA 0183 Packet")
+  NMEASENTENCE = Proto('NMEA0183', 'NMEA Sentence')
   --local bitw = require("bit")
   local fp = NMEAPROTO.fields
   local fm = NMEASENTENCE.fields
