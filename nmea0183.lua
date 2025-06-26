@@ -460,7 +460,7 @@ do
   -- The dissector
   function NMEAPROTO.dissector(buffer, pinfo, tree)
     pinfo.cols.protocol = "NMEA0183"
-    local msg_pattern = '%$[%w,%.%+%-]+*%x%x'
+    local msg_pattern = '%$[^%*%c]+%*[0-9A-Fa-f][0-9A-Fa-f]'   
     local fields_pattern = ''
     local st
     local final = buffer:len()
